@@ -1,4 +1,3 @@
-Christian Lunge [14 h 52]
 node {
   def mvnHome
   stage('Preparation') { // for display purposes
@@ -45,7 +44,7 @@ node {
      if (isUnix()) {
         sh "'${mvnHome}/bin/mvn' -DdeployOnly deploy"
      } else {
-        bat(/"${mvnHome}\bin\mvn" -Dmaven.test.skip=true deploy -s "C:\Program Files (x86)\apache-maven-3.5.3\conf\settings.xml"/)
+        bat(/"${mvnHome}\bin\mvn" -Dmaven.test.skip=true deploy -s "C:\apache-maven-3.6.0\conf\settings.xml"/)
      }
   }
 
